@@ -1,0 +1,142 @@
+/* Reset de márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fef3c7; /* Fondo beige claro */
+  color: #4b2e2e; /* Texto marrón oscuro */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Estilo del encabezado */
+header {
+  background: linear-gradient(135deg, #d97706, #f59e0b); /* Tonos naranjas */
+  color: #fff7ed; /* Texto blanco cálido */
+  text-align: center;
+  padding: 15px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Contenedor principal */
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #fff8e6; /* Fondo crema */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor del formulario */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Fila del formulario */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-row label {
+  font-weight: bold;
+  flex: 1;
+  min-width: 100px;
+  color: #4b2e2e; /* Texto marrón oscuro */
+}
+
+.form-row select,
+.form-row input {
+  flex: 2;
+  padding: 12px;
+  border: 1px solid #d97706; /* Naranja */
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff; /* Fondo blanco */
+  color: #4b2e2e; /* Texto marrón oscuro */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-row select:focus,
+.form-row input:focus {
+  border-color: #f59e0b; /* Dorado */
+  outline: none;
+  box-shadow: 0 0 5px #f59e0b;
+}
+
+/* Botón de búsqueda */
+.btn {
+  background-color: #d97706; /* Naranja */
+  color: #fff7ed; /* Texto blanco cálido */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #f59e0b; /* Dorado */
+  transform: translateY(-2px); /* Efecto de elevación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor de resultados */
+#resultado {
+  margin-top: 30px;
+  padding: 15px;
+  border: 1px solid #d97706; /* Naranja */
+  border-radius: 6px;
+  background-color: #fff8e6; /* Fondo crema */
+  color: #4b2e2e; /* Texto marrón oscuro */
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Pie de página */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #d97706, #f59e0b); /* Fondo degradado naranja */
+  color: #fff7ed; /* Texto blanco cálido */
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Estilo responsivo */
+@media screen and (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row label,
+  .form-row select,
+  .form-row input {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades - Lab 06</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Lab 06: Búsqueda en un archivo CSV de Universidades Licenciadas</h1>
+    </header>
+    <main>
+        <form action="/cgi-bin/lab06.pl" method="GET" class="form-container">
+            <!-- Fila: Tipo de búsqueda y comentario -->
+            <div class="form-row">
+                <div class="form-col">
+                    <select id="tipoBusqueda" name="tipoBusqueda">
+                        <option value="">Seleccione</option>
+                        <option value="1" @{[($tipoBusqueda == 1) ? 'selected' : '']}>Nombre</option>
+                        <option value="2" @{[($tipoBusqueda == 2) ? 'selected' : '']}>Tipo de gestion</option>
+                        <option value="3" @{[($tipoBusqueda == 3) ? 'selected' : '']}>Estado de Licenciamiento</option>
+                        <option value="4" @{[($tipoBusqueda == 4) ? 'selected' : '']}>Periodo de licenciamiento</option>
+                        <option value="5" @{[($tipoBusqueda == 5) ? 'selected' : '']}>Ubicacion</option>
+                    </select>
+                </div>
+                <div class="form-col">
+                    <input type="text" id="comentario" name="comentario">
+                </div>
+            </div>
+    
+            <!-- Fila: Departamento -->
+            <div class="form-row">
+                <label for="departamento">Departamento:</label>
+                <select id="departamento" name="departamento">
+                    <option value="">Seleccione</option>
+                    <option value="AMAZONAS">Amazonas</option>
+                    <option value="ANCASH">Áncash</option>
+                    <option value="APURIMAC">Apurímac</option>
+                    <!-- Agrega más departamentos aquí -->
+                </select>
+            </div>
+    
+            <!-- Fila: Provincia -->
+            <div class="form-row">
+                <label for="provincia">Provincia:</label>
+                <select id="provincia" name="provincia">
+                    <option value="">Seleccione</option>
+                    <optgroup label="Amazonas">
+                        <option value="CHACHAPOYAS">Chachapoyas</option>
+                        <option value="BAGUA">Bagua</option>
+                        <!-- Más provincias -->
+                    </optgroup>
+                    <optgroup label="Áncash">
+                        <option value="HUARAZ">Huaraz</option>
+                        <option value="AIJA">Aija</option>
+                        <!-- Más provincias -->
+                    </optgroup>
+                </select>
+            </div>
+    
+            <!-- Fila: Distrito -->
+            <div class="form-row">
+                <label for="distrito">Distrito:</label>
+                <select id="distrito" name="distrito">
+                    <option value="">Seleccione</option>
+                    <optgroup label="Chachapoyas (Amazonas)">
+                        <option value="CHACHAPOYAS">Chachapoyas</option>
+                        <option value="ASUNCION">Asunción</option>
+                        <!-- Más distritos -->
+                    </optgroup>
+                    <optgroup label="Huaraz (Áncash)">
+                        <option value="HUARAZ">Huaraz</option>
+                        <option value="COCHABAMBA">Cochabamba</option>
+                        <!-- Más distritos -->
+                    </optgroup>
+                </select>
+            </div>
+    
+            <!-- Botón de envío -->
+            <div class="form-row">
+                <button type="submit" class="btn">Buscar</button>
+            </div>
+        </form>
+    
+        <div id="resultado">
+            <!-- Aquí se mostrará la respuesta del script CGI -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 - Pw1 - 24b Grupo D | Hecho por Juan Perez</p>
+    </footer>
+</body>
+</html>
